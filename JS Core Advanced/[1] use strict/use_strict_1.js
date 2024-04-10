@@ -5,9 +5,13 @@
 "use strict";
 
 function factorial(number) {
+  if (typeof number !== "number" || number < 0) {
+    throw new Error("Input must be a non-negative number");
+  }
+
   if (number <= 1) return 1;
 
   return number * factorial(number - 1);
 }
 
-console.log(factorial(20));
+console.log(factorial(10));
