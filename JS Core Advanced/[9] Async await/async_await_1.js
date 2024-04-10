@@ -7,7 +7,6 @@ const getData = async (url) => {
     if (!response.ok) throw new Error("Data upload error!");
     const products = await response.json();
     return products;
-    return;
   } catch (error) {
     console.error("Error", error.message);
     throw error;
